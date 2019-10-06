@@ -25,6 +25,25 @@ namespace Customers
         public MainPage()
         {
             this.InitializeComponent();
+
+            List<string> titles = new List<string>
+            {
+                "Ms.", "Mrs.", "Mr.", "Miss"
+            };
+            this.title.ItemsSource = titles;
+            this.cTitle.ItemsSource = titles;
+
+
+            Customer customer = new Customer
+            {
+                CustomerID = 1,
+                Title = "Mr.",
+                FirstName = "Boaty",
+                LastName = "McBoatface",
+                Email = "boaty@seas.rough",
+                Phone = "999-000-911"
+            };
+            this.DataContext = customer;
         }
     }
 }
